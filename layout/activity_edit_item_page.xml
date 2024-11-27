@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/tvEditItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Item"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Item Name Field -->
+    <EditText
+        android:id="@+id/etItemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Item Name"
+        android:inputType="text"
+        android:layout_below="@id/tvEditItemTitle"
+        android:layout_marginTop="16dp" />
+
+    <!-- Price Field -->
+    <EditText
+        android:id="@+id/etPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Price (RM)"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/etItemName"
+        android:layout_marginTop="8dp" />
+
+    <!-- Description Field -->
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:gravity="top"
+        android:layout_below="@id/etPrice"
+        android:layout_marginTop="8dp" />
+
+    <!-- Category Spinner -->
+    <Spinner
+        android:id="@+id/spinnerCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etDescription"
+        android:layout_marginTop="8dp" />
+
+    <!-- Size Field -->
+    <EditText
+        android:id="@+id/etSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Available Sizes (comma-separated)"
+        android:inputType="text"
+        android:layout_below="@id/spinnerCategory"
+        android:layout_marginTop="8dp" />
+
+    <!-- Color Field -->
+    <EditText
+        android:id="@+id/etColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Available Colors (comma-separated)"
+        android:inputType="text"
+        android:layout_below="@id/etSize"
+        android:layout_marginTop="8dp" />
+
+    <!-- Submit Button for Update -->
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etColor"
+        android:layout_marginTop="16dp"
+        android:text="Update Item"
+        android:textColor="@android:color/white" />
+
+    <!-- Delete Button -->
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete Item"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/btnSubmit"
+        android:layout_marginTop="8dp" />
+
+</RelativeLayout>
